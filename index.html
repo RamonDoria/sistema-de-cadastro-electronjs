@@ -3,41 +3,34 @@
   <head>
     <meta charset="UTF-8">
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link rel="stylesheet" href="styles.css">
-    <title>Sistema de Cadastro</title>
+    <title>Sistema de cadastro</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="styles.css" />
   </head>
+  <body>
+    <h1>Sistema de cadastro</h1>
 
-  <body style="background-color: red;">
-    <h1>Sistema de Cadastro</h1>
-    <form >
-      <label for="nome">Nome</label>
-    <input id="nome" name ="nome" type= "text" placeholder="Digite seu Nome" />
+    <form>
+      <label for="nome">Nome completo</label>
+      <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
+  
+      <label for="cpf">CPF</label>
+      <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" />
 
-    <br>
+      <label for="data_nascimento">Data de Nascimento</label>
+      <input id="data_nascimento" type="date" name="data_nascimento" />
 
-    <label for="cpf">CPF</label>
-    <input id="cpf" name ="cpf" type= "text" placeholder="Digite seu CPF" />
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" placeholder="Digite seu email" />
 
-    <br>
+      <label for="senha">Senha</label>
+      <input id="senha" type="password" name="senha" placeholder="Digite sua senha" />
 
-    <label for="data">Data de nascimento</label>
-    <input id="data" name ="data" type= "date" placeholder="Digite sua data de Nascimento" />
-
-    <br>
-
-    <label for="email">Email</label>
-    <input id="email" type="email" name="email" placeholder="Digite seu E-mail">
-
-    <br>
-
-    <label for="senha">Senha</label>
-    <input id="senha" type="password" name="senha" placeholder="Digite sua senha">
-
-    <br>
-
-    <button type="submit">Enviar</button>
-
+      <button type="submit">Enviar formulário</button>
     </form>
   </body>
 </html>
