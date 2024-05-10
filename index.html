@@ -14,15 +14,15 @@
   <body>
     <h1>Sistema de cadastro</h1>
 
-    <form>
+    <form onsubmit="lidarComFormulario()">
       <label for="nome">Nome completo</label>
       <input id="nome" type="text" name="nome" placeholder="Digite seu nome" />
   
       <label for="cpf">CPF</label>
       <input id="cpf" type="text" name="cpf" placeholder="Digite seu CPF" />
 
-      <label for="data_nascimento">Data de Nascimento</label>
-      <input id="data_nascimento" type="date" name="data_nascimento" />
+      <label for="data">Data de Nascimento</label>
+      <input id="data" type="date" name="data" />
 
       <label for="email">Email</label>
       <input id="email" type="email" name="email" placeholder="Digite seu email" />
@@ -32,5 +32,40 @@
 
       <button type="submit">Enviar formulário</button>
     </form>
+
+    <script>
+      function lidarComFormulario() {
+
+        var nome = document.getElementById('nome').value;
+        console.log(nome);
+
+        var cpf = document.getElementById('cpf').value;
+        console.log(cpf);
+
+        var data = document.getElementById('data').value;
+        console.log(data);
+
+        var email = document.getElementById('email').value;
+        console.log(email);
+
+        var senha = document.getElementById('senha').value;
+        console.log(senha);
+        if(nome == ''){
+          alert('Nome nao pode ser vazio')
+          return;
+        }
+        if(cpf == ''){
+          alert('CPF nao pode ser vazio')
+          return;
+        }
+        if (senha.length < 8){
+          alert('Senha muito curta')
+          return;
+        }
+
+          alert('Fomulario enviado com sucessoor!');
+      }
+
+    </script>
   </body>
 </html>
